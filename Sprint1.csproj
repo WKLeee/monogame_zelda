@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4BC365BF-7C0B-4CBD-B40D-52BDD5E996BC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sprint_1</RootNamespace>
+    <AssemblyName>Sprint 1</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>BasicDesignGuidelineRules.ruleset</CodeAnalysisRuleSet>
+    <NoWarn>
+    </NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Camera.cs" />
+    <Compile Include="Commands\AttackReleaseCommand.cs" />
+    <Compile Include="Commands\AttackCommand.cs" />
+    <Compile Include="Commands\UpReleaseCommand.cs" />
+    <Compile Include="GameOverScreen.cs" />
+    <Compile Include="PausedScreen.cs" />
+    <Compile Include="Commands\DownReleaseCommand.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="HUDEventArgs\EnemyDeathEventArgs.cs" />
+    <Compile Include="HUDEventArgs\LevelCompleteArgs.cs" />
+    <Compile Include="HUDEventArgs\ItemCollectEventArgs.cs" />
+    <Compile Include="HUD.cs" />
+    <Compile Include="Sounds\SoundHandler.cs" />
+    <Compile Include="Collider.cs" />
+    <Compile Include="CollisionObject.cs" />
+    <Compile Include="Commands\MuteCommand.cs" />
+    <Compile Include="Commands\ResetCommand.cs" />
+    <Compile Include="Controllers\ControllerHandler.cs" />
+    <Compile Include="Grid.cs" />
+    <Compile Include="Commands\BoundaryToggleCommand.cs" />
+    <Compile Include="Commands\CommandHandler.cs" />
+    <Compile Include="Commands\HorizontalReleaseCommand.cs" />
+    <Compile Include="Commands\PauseCommand.cs" />
+    <Compile Include="Commands\PrintChordCommand.cs" />
+    <Compile Include="Commands\PrintHoldCommand.cs" />
+    <Compile Include="Commands\PrintPressCommand.cs" />
+    <Compile Include="Commands\PrintReleaseCommand.cs" />
+    <Compile Include="Commands\QuitCommand.cs" />
+    <Compile Include="Commands\UpCommand.cs" />
+    <Compile Include="Commands\DownCommand.cs" />
+    <Compile Include="Commands\LeftCommand.cs" />
+    <Compile Include="Commands\RightCommand.cs" />
+    <Compile Include="Commands\SpriteVisibilityToggleCommand.cs" />
+    <Compile Include="Controllers\GamePadController.cs" />
+    <Compile Include="Controllers\KeyboardController.cs" />
+    <Compile Include="LevelDefinition.cs" />
+    <Compile Include="MovementStates\WalkingDown.cs" />
+    <Compile Include="MovementStates\CannotMoveState.cs" />
+    <Compile Include="PowerUpStates\EnemyDeadState.cs" />
+    <Compile Include="PowerUpStates\EnemyNormalState.cs" />
+    <Compile Include="PowerUpStates\EnemyPowerUpState.cs" />
+    <Compile Include="MovementStates\IdleState.cs" />
+    <Compile Include="MovementStates\FallState.cs" />
+    <Compile Include="MovementStates\WalkingUp.cs" />
+    <Compile Include="MovementStates\MarioMoveState.cs" />
+    <Compile Include="MovementStates\WalkingState.cs" />
+    <Compile Include="PowerUpStates\DeadState.cs" />
+    <Compile Include="PowerUpStates\FireState.cs" />
+    <Compile Include="PowerUpStates\MarioPowerUpState.cs" />
+    <Compile Include="PowerUpStates\PowerUpStateAbstract.cs" />
+    <Compile Include="PowerUpStates\SmallState.cs" />
+    <Compile Include="PowerUpStates\StarState.cs" />
+    <Compile Include="PowerUpStates\SuperState.cs" />
+    <Compile Include="Sprites\BackgroundSprite.cs" />
+    <Compile Include="Sprites\BlockSprite.cs" />
+    <Compile Include="Sprites\EnemySprite.cs" />
+    <Compile Include="Sprites\MovingAnimatedSprite.cs" />
+    <Compile Include="Sprites\PlayerSprite.cs" />
+    <Compile Include="Sprites\NullClass.cs" />
+    <Compile Include="Sprites\SpriteFactory.cs" />
+    <Compile Include="Sprites\ItemSprite.cs" />
+    <Compile Include="Sprites\StationaryNonAnimatedSprite.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="Interfaces\ICommand.cs" />
+    <Compile Include="Interfaces\IController.cs" />
+    <Compile Include="Interfaces\IMovementState.cs" />
+    <Compile Include="Interfaces\IBlockState.cs" />
+    <Compile Include="Interfaces\IPowerUpState.cs" />
+    <Compile Include="Interfaces\ISprite.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sprites\FireSprite.cs" />
+    <Compile Include="Sprites\SwordSprite.cs" />
+    <Compile Include="Transition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework.Content.Pipeline">
+      <HintPath>C:\Program Files (x86)\MSBuild\MonoGame\v3.0\Tools\MonoGame.Framework.Content.Pipeline.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Windows\x86\Debug\Content\Content\TileMapXml.xml" />
+    <Content Include="bin\Windows\x86\Debug\Sprint 1.exe" />
+    <Content Include="bin\Windows\x86\Debug\Sprint 1.pdb" />
+    <Content Include="Content\Blocks\brokenLowerLeft.png" />
+    <Content Include="Content\Blocks\brokenLowerRight.png" />
+    <Content Include="Content\Blocks\brokenUpperLeft.png" />
+    <Content Include="Content\Blocks\brokenUpperRight.png" />
+    <Content Include="Content\Enemies\Goomba.png" />
+    <Content Include="Content\Enemies\GreenKoopa.png" />
+    <Content Include="Content\Enemies\RedKoopa.png" />
+    <Content Include="Content\Item Sprites\1Up.png" />
+    <Content Include="Content\Item Sprites\coin.png" />
+    <Content Include="Content\Item Sprites\FireFlower.png" />
+    <Content Include="Content\Item Sprites\Mushroom.png" />
+    <Content Include="Content\Item Sprites\Star.png" />
+    <Content Include="Content\TileMapXml.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Icon.ico" />
+    <Content Include="README.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+    <None Include="app.manifest" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Background\Clouds.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Background\Mountains.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Background\SingleCloud.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Background\SingleGrass.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Background\TripleCloud.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Background\TripleGrass.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Background\TwinCloud.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Background\TwinGrass.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Blocks\brickblock.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Blocks\BrokenBlock.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Blocks\DebrisBlock.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Blocks\HiddenBlock.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Blocks\NormalBlock.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Blocks\QuestionMarkBlock.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Blocks\UsedBlock.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\brickblock.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\brickblock.xnb~b96fded544732f0bf93a2cfdec504c0fc951be5e" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\brickblock.xnb~HEAD" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\BrokenBlock.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Castle.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\DebrisBlock.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Enemies\Goomba.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Enemies\GoombaDead.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Enemies\GreenKoopa.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Enemies\GreenKoopaDead.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Enemies\RedKoopa.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Enemies\RedKoopaDead.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Flag.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Goomba.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Goomba.xnb~b96fded544732f0bf93a2cfdec504c0fc951be5e" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Goomba.xnb~HEAD" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\HiddenBlock.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Item Sprites\1Up.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Item Sprites\coin.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Item Sprites\FireFlower.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Item Sprites\Mushroom.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Item Sprites\Star.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\LongPipe.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Mario Sprites\deadMario.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Mario Sprites\deadMario.xnb~b96fded544732f0bf93a2cfdec504c0fc951be5e_0" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Mario Sprites\deadMario.xnb~HEAD_0" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Mario Sprites\fireMario.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Mario Sprites\fireMario.xnb~b96fded544732f0bf93a2cfdec504c0fc951be5e_0" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Mario Sprites\fireMario.xnb~HEAD_0" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Mario Sprites\standardMario.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Mario Sprites\standardMario.xnb~b96fded544732f0bf93a2cfdec504c0fc951be5e_0" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Mario Sprites\standardMario.xnb~HEAD_0" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Mario Sprites\starMarioStandard.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Mario Sprites\starMarioStandard.xnb~b96fded544732f0bf93a2cfdec504c0fc951be5e_0" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Mario Sprites\starMarioStandard.xnb~HEAD_0" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Mario Sprites\starMarioSuper.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Mario Sprites\starMarioSuper.xnb~b96fded544732f0bf93a2cfdec504c0fc951be5e_0" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Mario Sprites\starMarioSuper.xnb~HEAD_0" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Mario Sprites\superMario.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Mario Sprites\superMario.xnb~b96fded544732f0bf93a2cfdec504c0fc951be5e_0" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\Mario Sprites\superMario.xnb~HEAD_0" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\MarioJumping.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\MarioJumping.xnb~b96fded544732f0bf93a2cfdec504c0fc951be5e" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\MarioJumping.xnb~HEAD" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\MarioSpritesheetRunRight.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\MarioSpritesheetRunRight.xnb~b96fded544732f0bf93a2cfdec504c0fc951be5e" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\MarioSpritesheetRunRight.xnb~HEAD" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\MiddlePipe.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\NormalBlock.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\QuestionMarkBlock.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\ShortPipe.xnb" />
+    <None Include="bin\Windows\x86\Debug\Content\Content\UsedBlock.xnb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Windows\Content\" />
+    <Folder Include="bin\Windows\x86\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

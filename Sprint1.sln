@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sprint1", "Sprint1.csproj", "{4BC365BF-7C0B-4CBD-B40D-52BDD5E996BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BC365BF-7C0B-4CBD-B40D-52BDD5E996BC}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{4BC365BF-7C0B-4CBD-B40D-52BDD5E996BC}.Debug|ARM.ActiveCfg = Debug|x86
+		{4BC365BF-7C0B-4CBD-B40D-52BDD5E996BC}.Debug|ARM64.ActiveCfg = Debug|x86
+		{4BC365BF-7C0B-4CBD-B40D-52BDD5E996BC}.Debug|x64.ActiveCfg = Debug|x86
+		{4BC365BF-7C0B-4CBD-B40D-52BDD5E996BC}.Debug|x86.ActiveCfg = Debug|x86
+		{4BC365BF-7C0B-4CBD-B40D-52BDD5E996BC}.Debug|x86.Build.0 = Debug|x86
+		{4BC365BF-7C0B-4CBD-B40D-52BDD5E996BC}.Release|Any CPU.ActiveCfg = Release|x86
+		{4BC365BF-7C0B-4CBD-B40D-52BDD5E996BC}.Release|ARM.ActiveCfg = Release|x86
+		{4BC365BF-7C0B-4CBD-B40D-52BDD5E996BC}.Release|ARM64.ActiveCfg = Release|x86
+		{4BC365BF-7C0B-4CBD-B40D-52BDD5E996BC}.Release|x64.ActiveCfg = Release|x86
+		{4BC365BF-7C0B-4CBD-B40D-52BDD5E996BC}.Release|x86.ActiveCfg = Release|x86
+		{4BC365BF-7C0B-4CBD-B40D-52BDD5E996BC}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4170833A-7CB4-427C-B8F8-8D5B69D5DFAA}
+	EndGlobalSection
+EndGlobal
